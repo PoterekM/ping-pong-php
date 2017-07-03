@@ -2,36 +2,13 @@
 
 class PingPongGenerator
 {
-    private $user_input;
-
-
-    function generatePingPongArray($user_input)
+    function numbers_not_divisible_by_three($input_number)
     {
-        $this->number = $number;
-
-    }
-    function getNumber()
-    {
-        return $this->number;
-    }
-    function setNumber()
-    {
-        $this->number = (string)$new_number;
-        //maybe try get new array eventually
-    }
-    static function getAll()
-    {
-        return $_SESSION['list_of_numbers'];
-    }
-    static function deleteAll()
-    {
-        $_SESSION['list_of_numbers'] = array();
+        // array = [];
+        return (($input_number % 3) == 0);
     }
 
+    // static function getAll()
 
 }
-
-
-
-
- ?>
+?>
