@@ -22,15 +22,12 @@
         // , array('numbers' => PingPongGenerator::getAll()));
     });
 
-    $app->get("views")
+    $app->get("/create", function () use($app) {
+        $my_PingPongGenerator = new PingPongGenerator;
+        $input_number = $my_PingPongGenerator->numbers_divisible_by_three($_GET['number']);
+        return $app['twig']->render('pingpong.html.twig', array('result' => $input_number));
 
-    // $app->get("/create", function() use ($app) {
-    //     $my_PingPongGenerator = new PingPongGenerator;
-    //     $pingPongNumber = $my_PingPongGenerator->generatePingPongArray($_GET['number'])
-    //     return $app['twig']->render('create.html.twig', array('result' => $pingPongNumber));
-    // });
-
-
+    });
 
     return $app;
 ?>
