@@ -2,7 +2,7 @@
 
 class PingPongGenerator
 {
-    function numbers_not_divisible_by_three($input_number)
+    function numbers_divisible_by_three($input_number)
     {
         // array = [];
         return (($input_number % 3) == 0);
